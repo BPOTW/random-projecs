@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <canvas id="canvas" height="400" width="400"></canvas>
-</body>
+  </head>
+  <body>
+    <div id="body">
+      <canvas id="canvas" height="400" width="400">
+        <svg
+          id="box"
+          width="400"
+          height="400"
+          style="border: 1px solid black; background: #fdfdfd"
+        ></svg>
+      </canvas>
+
+      <div id="inputSection">
+        <label for="">
+          No of particles <br />
+          <input
+            class="inputF"
+            id="particles"
+            type="number"
+            placeholder=""
+            onchange="checkParticles()"
+          />
+        </label>
+        <label for="">
+          Radius of ball
+          <br />
+          <input
+            class="inputF"
+            id="ballRad"
+            type="number"
+            placeholder=""
+            onchange="changeRad()"
+          />
+        </label>
+        <label for="">
+          Veocities <br />
+          <input
+            class="inputF"
+            id="velocity"
+            type="number"
+            placeholder=""
+            onchange="changeVel()"
+          />
+        </label>
+        <label for="">
+          Minimum connection distance <br />
+          <input
+            class="inputF"
+            id="minDistForCon"
+            type="number"
+            placeholder=""
+            onchange="checkValues()"
+          />
+        </label>
+        <label for=""
+          >Maximum connection distance <br />
+          <input
+            class="inputF"
+            id="maxDistForCon"
+            type="number"
+            placeholder=""
+            onchange="checkValues()"
+        /></label>
+        <label for="">
+          Number of connections per ball <br />
+          <input
+            class="inputF"
+            id="noOfConnections"
+            type="number"
+            placeholder="Number of connections"
+            onchange="checkValues()"
+          />
+        </label>
+        <label for="ballCollision"
+          >Allow collisions between balls &nbsp;<input
+            class="inputR"
+            id="ballCollision"
+            type="checkbox"
+            name="ballCollision"
+            onchange="checkValues()"
+        /></label>
+        <label for="">
+          Allow collisions between balls and boundary &nbsp;
+          <input
+            class="inputR"
+            id="boundaryCollision"
+            type="checkbox"
+            onchange="checkValues()"
+          />
+        </label>
+        <!-- <input class="inputF" id="" type="text" placeholder="">
+        <input class="inputF" id="" type="text" placeholder=""> -->
+      </div>
+    </div>
+  </body>
 </html>
